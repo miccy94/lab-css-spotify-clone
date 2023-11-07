@@ -1,8 +1,176 @@
-/*
-Colors:
+@font-face {
+    font-family: 'Open Sans Condensed';
+    src: url('/fonts/OpenSansCondensed-Regular.eot');
+    src: url('/fonts/OpenSansCondensed-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/OpenSansCondensed-Regular.woff2') format('woff2'),
+        url('/fonts/OpenSansCondensed-Regular.woff') format('woff'),
+        url('/fonts/OpenSansCondensed-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
-Text: 1A1A1A
-Green: #00B172
-White: #FFF
+@font-face {
+    font-family: 'Open Sans Condensed';
+    src: url('/fonts/OpenSansCondensed-SemiBold.eot');
+    src: url('/fonts/OpenSansCondensed-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/OpenSansCondensed-SemiBold.woff2') format('woff2'),
+        url('/fonts/OpenSansCondensed-SemiBold.woff') format('woff'),
+        url('/fonts/OpenSansCondensed-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
 
-*/
+body {
+    font-family: Open Sans Condensed;  /*koristila sam font koji sam nasla da je slican onom sa date stranice
+                                           nije isti ali slican je :D */
+    margin: 0;
+}
+
+nav {
+     position: fixed;  /*kada zakomentarisem position fixed, spotify logo u nav baru mi ode skroz do gornje ivice,
+                       pretpostavljam da to resim sa margin top, ali ne znam da li je ispravno. A kada koristim 
+                       position fixed background slika mi prelazi preko nav bara i tada je resenje da za div sa 
+                       backgr slikom stavim margin top 50-tak px. Sta je ispravno resenje? Takodje, primetila sam da 
+                       nav uopste nema dimenzije, kao da se logo i lista ne nalaze u njemu uopste. Zasto? Mislim da
+                       zapravo to najvise otezava situaciju.*/
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.spotify-logo {
+    max-width: 120px;
+    max-height: 100px;
+    float: left;
+    margin-left: 10px;
+
+}
+
+ul {
+    float: right;
+    display: flex;
+    list-style: none;
+}
+
+li {
+    margin-right: 15px;
+}
+
+li > a {
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.landing-page {    
+    background-image: url(/images/landing.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    width: 100vw;
+    margin-top: 50px;
+}
+
+.landing-page > h1 {
+    color: white;
+    margin-bottom: 5px;
+    font-size: 3em;
+}
+
+.landing-page > p {
+    color: white;
+    max-width: 350px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.container-div > div > img {
+    max-width: 100px;
+    max-height: 50px;
+}
+
+.second-page {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.container-div {
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container-div > div {
+    width: 200px;
+}
+
+h2 {
+    border-bottom: solid 2px #00B172;
+    padding: 5px 0;
+    width: fit-content;
+}
+
+h3 {
+    color: #00B172;
+}
+
+.green-div {
+    background-color: #00B172;
+    margin: 15px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+
+}
+
+.text-section {
+    margin-left: 60px;
+}
+
+.text-section > h2 {
+    color: white;
+    width: fit-content;
+    border-bottom: 2px solid white;
+}
+
+.text-section > div > p {
+    color: white;
+}
+
+.text-section > div > h3 {
+    color: white;
+    padding: 10px 0;
+}
+
+.text-section > div {
+    max-width: 220px;
+}
+
+.image-section {
+    display: flex;
+    align-items: center;
+}
+
+.image-section > img {
+    max-width: 300px;
+    max-height: 400px;
+    margin: 50px 100px;
+}
+
+.spotify-icon-white {
+    max-width: 70px;
+    max-height: 70px;
+    align-self: center; /*ovde ipak nisam u potpunosti uspela da centriram ovu ikonicu.
+                           Ona treba da bude, kako kazu, tacno u centru green div-a, nezavisno od 
+                           ove dve sekcije. Da li to moze? :D spomenuli su rec apsolutno centrirana u odnosu
+                           na green div. Probala sam sa position abolut ali uopste ne kapiram koji je parent 
+                           element u tom slucaju, jer green div definitivno nije. I da, znam da parent element
+                           treba da bude position relative, ali..*/
+}
