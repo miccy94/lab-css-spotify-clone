@@ -173,4 +173,10 @@ h3 {
                            na green div. Probala sam sa position abolut ali uopste ne kapiram koji je parent 
                            element u tom slucaju, jer green div definitivno nije. I da, znam da parent element
                            treba da bude position relative, ali..*/
+    transition: transform .2s;
+}
+
+.spotify-icon-white:hover {
+    transform: scale(1.1);
+    cursor: cell;   
 }
